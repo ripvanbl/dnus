@@ -1,3 +1,5 @@
+before_script:
+  - cd api
 language: node_js
 node_js:
   - 7
