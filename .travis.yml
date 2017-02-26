@@ -1,8 +1,5 @@
 before_script:
   - cd api
-  - ls
-  - cd bin
-  - ls
 language: node_js
 node_js:
   - 7

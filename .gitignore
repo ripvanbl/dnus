@@ -30,7 +30,6 @@ npm-debug.log
 *.pydevproject
 .project
 .metadata
-bin/
 tmp/
 *.tmp
 *.bak
