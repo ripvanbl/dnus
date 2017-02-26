@@ -1,6 +1,6 @@
-script:
+before_script:
   - cd api
-  - . bin/test-runner.sh
+  - chmod +x bin/test-runner.sh
 language: node_js
 node_js:
   - 7
