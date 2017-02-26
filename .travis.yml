@@ -1,6 +1,6 @@
 script:
   - cd api
-  - . bin/test-runner.sh)
+  - . bin/test-runner.sh
 language: node_js
 node_js:
   - 7
