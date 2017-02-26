@@ -1,7 +1,5 @@
-before_script:
-  - npm install
 script:
-  - (cd api && ./bin/test-runner.sh)
+  - bash (cd api && bin/test-runner.sh)
 language: node_js
 node_js:
   - 7
