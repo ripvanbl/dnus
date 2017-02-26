@@ -3,6 +3,7 @@
 /.c9revisions/
 
 # Node.js
+node_modules/
 node_modules\*
 node_modules/*
 *.debug
