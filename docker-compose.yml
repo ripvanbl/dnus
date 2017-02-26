@@ -1,0 +1,56 @@
+version: "3"
+
+networks:
+  dnus_net_front:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/24
+  dnus_net_back:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.19.0.0/24
+
+services: 
+  dnus_api:
+    container_name: dnus_api
+    build: 
+      context: .
+      dockerfile: /.docker/dnus_api/dockerfile
+    image: ripvanbl/dnus_api
+    ports:
+      - "3000:3000"
+    depends_on: ["dnus_cache"]
+    networks:
+      - dnus_net_front
+      - dnus_net_back
+    # volumes:
+    #   - ./api:/var/www/api
+  
+  dnus_cache:
+    container_name: dnus_cache
+    build: 
+      context: .
+      dockerfile: /.docker/dnus_cache/dockerfile
+    image: ripvanbl/dnus_cache
+    ports:
+      - "6379:6379"
+    networks:
+      - dnus_net_back
+  
+  dnus_web:
+    container_name: dnus_web
+    build:
+      context: .
+      dockerfile: /.docker/dnus_web/dockerfile
+    image: ripvanbl/dnus_web
+    depends_on: ["dnus_api"]
+    ports:
+      - "80:80"
+    networks:
+      - dnus_net_front
+    # volumes:
+    #   - ./web:/var/www/public

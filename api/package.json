@@ -1,0 +1,15 @@
+{
+  "name": "docker-node-urlshortener-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/bootstraper"
+  },
+  "dependencies": {
+    "body-parser": "1.16.0",
+    "debug": "2.6.0",
+    "express": "4.14.1",
+    "morgan": "1.7.0",
+    "redis": "2.4.2"
+  }
+}

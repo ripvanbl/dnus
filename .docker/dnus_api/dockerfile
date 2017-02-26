@@ -1,0 +1,16 @@
+FROM node:7
+EXPOSE 3000
+
+RUN mkdir -p /var/log/pm2 && \
+    mkdir -p /var/scripts/dnus_api
+
+COPY /api /var/www/api
+COPY /.docker/dnus_api/start.sh /var/scripts/dnus_api
+
+WORKDIR /var/www/api
+
+RUN npm install -g pm2@latest && \
+    npm install && \
+    chmod +rx /var/scripts/dnus_api/*.sh
+
+ENTRYPOINT ["/var/scripts/dnus_api/start.sh"]

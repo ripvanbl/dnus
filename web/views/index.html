@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+  <title>ripvanbl/Url Shortener</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body class="no-touch">
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand">
+              <a class="navbar-brand" href="https://github.com/ripvanbl/" target="_blank">
+                <img src="https://www.gravatar.com/avatar/6fb8d2f4192627b7985016d486bfec04?s=80&d=retro" alt="Brandon Lind" class="profile-picture" /> Brandon Lind
+              </a>
+            </h3>
+            <nav class="nav nav-masthead">
+              &nbsp;
+            </nav>
+          </div>
+        </div>
+        <div class="inner cover">
+          <h1 class="cover-heading">Url Shortener</h1>
+          <p class="lead">Drop-dead-simple url shorter.</p>
+          <div class="card">
+            <div class="card-header">
+              Get Started
+            </div>
+            <div class="card-block">
+              <h4 class="card-title">Step 1</h4>
+              <p class="card-text">
+                Submit a url you want to target.
+                <div class="input-group">
+                  <input type="text" id="targeturl" class="form-control" placeholder="Target url...">
+                  <span class="input-group-btn">
+                    <button type="button" id="targeturlbtn" class="btn btn-secondary">Generate!</button>
+                  </span>
+                </div>
+              </p>
+            </div>
+            <div class="card-block">
+              <h4 class="card-title">Step 2</h4>
+              <p class="card-text">
+                Once you submit your target url, the shortened link information will appear here:
+                <pre><code id="result"></code></pre>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mastfoot">
+          <div class="inner">
+            <p>&copy; 2017 <a class="navbar-brand" href="https://github.com/ripvanbl/" target="_blank">Brandon Lind</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <!-- bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <!-- ripvanbl app -->
+  <script src='/scripts/main.js'></script>
+</body>
+
+</html>
