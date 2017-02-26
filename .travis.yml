@@ -1,5 +1,7 @@
 before_script:
   - cd api
+install:
+  - npm install
 language: node_js
 node_js:
   - 7
