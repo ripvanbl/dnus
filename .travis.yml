@@ -1,6 +1,5 @@
 script:
   - cd api
-  - npm i
 language: node_js
 node_js:
   - 7
