@@ -1,5 +1,6 @@
 script:
-  - cd api && ./bin/test-runner.sh
+  - cd api
+  - pwd
 language: node_js
 node_js:
   - 7
