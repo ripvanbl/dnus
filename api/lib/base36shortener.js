@@ -1,12 +1,41 @@
 'use strict';
+var alphabet = "0123456789abcdefghijklmnopqrstuvwxyz";
+var base = alphabet.length;
 
+
+////////////////////////////////////////////////////////////
+// Module Definition
+////////////////////////////////////////////////////////////
+
+
+/**
+ * Manages encoding / decoding between a number and a base36 string.
+ * @module base36shortener
+ */
 module.exports = {
+  /**
+    * Decodes a base36 string into a number.
+    * @param {string} str - The string to be decoded.
+    * @return {int}
+    */
   decode: decode,
+
+  /**
+    * Encodes a number into a base36 string.
+    * @param {int} num - The number to be encoded.
+    * @return {string}
+    */
   encode: encode
 };
 
-var alphabet = "0123456789abcdefghijklmnopqrstuvwxyz";
-var base = alphabet.length;
+
+
+
+
+////////////////////////////////////////////////////////////
+// Executors
+////////////////////////////////////////////////////////////
+
 
 function decode(str) {
   var decoded = 0;

@@ -1,4 +1,4 @@
-# Brandon Lind
+# Brandon Lind [![Build Status](https://travis-ci.org/ripvanbl/dnus.svg?branch=tests)](https://travis-ci.org/ripvanbl/dnus)
 
 > Yet another personal project
 

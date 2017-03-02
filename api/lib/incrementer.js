@@ -1,13 +1,34 @@
 'use strict';
-
-module.exports = {
-  next: _next
-};
-
 var i = 0;
 
-function _next() {
-  i++;
 
+////////////////////////////////////////////////////////////
+// Module Definition
+////////////////////////////////////////////////////////////
+
+
+/**
+ * Provides an overly simple number incrementer.
+ * @module incrementer
+ */
+module.exports = {
+  /**
+    * Increments the singleton number by 1.
+    * @return {int}
+    */
+  next: next
+};
+
+
+
+
+
+////////////////////////////////////////////////////////////
+// Executors
+////////////////////////////////////////////////////////////
+
+
+function next() {
+  i++;
   return i;
 }
